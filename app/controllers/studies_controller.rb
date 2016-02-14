@@ -9,10 +9,16 @@ class StudiesController < ApplicationController
 	end
 
 	def new
-
+		@study = Study.new
 	end
 
 	def create 
+		@study = Study.new(study_params)
+		if @study.save
+			redirect_to study_path(@study)
+		else
+    	render :new
+		end
 	end
 
 	def update

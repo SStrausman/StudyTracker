@@ -1,0 +1,14 @@
+<div class="inner-content">
+	<h1>Create a New Study</h1>
+	<%= form_for(@study) do |f| %>
+		<p><%= f.label :title %></p>
+		<p><%= f.text_field :title %></p>
+		<p><%= f.label :principal_investigator %></p>
+		<p><%= f.text_field :principal_investigator %></p>
+		<p><%= f.submit %></p>
+		<% @study.errors.full_messages.each do |error| %>
+				<p><%= error %></p>
+		<% end %>
+		</p>
+	<% end %>
+</div>
