@@ -1,0 +1,7 @@
+<% n = 0 %>
+<% @studies.each do |study| %>
+  <% n += 1 %>
+  <%= n %>
+  <%= study.title %>
+  <%= study.principal_investigator %>
+<% end %>

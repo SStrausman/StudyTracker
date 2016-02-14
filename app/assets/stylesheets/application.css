@@ -33,7 +33,7 @@ body{
   width: 20%;
   height: 100%;
   float: left;
-  background-color: black;
+  background-color: rgb(078, 042, 132);
   
 }
 
@@ -57,31 +57,30 @@ body{
 }
 
 .button {
-  background: #e3e3e3;
+  background: rgb(147, 128, 182);
   border: 1px solid #bbb;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: inset 0 0 1px 1px #f6f6f6;
-  -moz-box-shadow: inset 0 0 1px 1px #f6f6f6;
-  box-shadow: inset 0 0 1px 1px #f6f6f6;
+  -webkit-box-shadow: inset 0 0 1px 1px rgb(182, 172, 209);
+  -moz-box-shadow: inset 0 0 1px 1px rgb(182, 172, 209);
+  box-shadow: inset 0 0 1px 1px rgb(182, 172, 209);
   color: #333;
   font: bold 12px "helvetica neue", helvetica, arial, sans-serif;
   line-height: 1;
   padding: 8px 0 9px;
   margin: 2%;
   text-align: center;
-  text-shadow: 0 1px 0 #fff;
   width: 96%; }
   .button:hover {
-    background: #d9d9d9;
-    -webkit-box-shadow: inset 0 0 1px 1px #eaeaea;
-    -moz-box-shadow: inset 0 0 1px 1px #eaeaea;
-    box-shadow: inset 0 0 1px 1px #eaeaea;
+    background: rgb(182, 172, 209);
+    -webkit-box-shadow: inset 0 0 1px 1px rgb(182, 172, 209);
+    -moz-box-shadow: inset 0 0 1px 1px rgb(182, 172, 209);
+    box-shadow: inset 0 0 1px 1px rgb(182, 172, 209);
     color: #222;
     cursor: pointer; }
   .button:active {
-    background: #d0d0d0;
+    background: rgb(182, 172, 209);
     -webkit-box-shadow: inset 0 0 1px 1px #e3e3e3;
     -moz-box-shadow: inset 0 0 1px 1px #e3e3e3;
     box-shadow: inset 0 0 1px 1px #e3e3e3;
