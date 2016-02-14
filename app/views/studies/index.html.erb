@@ -1,7 +1,30 @@
-<% n = 0 %>
-<% @studies.each do |study| %>
-  <% n += 1 %>
-  <%= n %>
-  <%= study.title %>
-  <%= study.principal_investigator %>
-<% end %>
+<div class="inner-content">
+  <h1>Studies</h1>
+  <table id="study_table">
+    <thead>
+    <tr>
+      <th>Study Number</th>
+      <th>Title</th>    
+      <th>Principal Investigator</th>
+      <th>Status</th>
+      <th></th>
+    </tr>
+    </thead>
+    <% @studies.each do |study| %>
+      <tr>
+        <td><%= study.id %></td>
+        <td><%= study.title %></td>
+        <td><%= study.principal_investigator %> </td>
+        <td>
+          <% if study.open == true %>
+            Open
+          <% else %>
+            Closed
+          <% end %>
+        </td>
+        <td>
+          <%= link_to "View", study_path(study.id) %>
+      </tr>
+    <% end %>
+  </table>
+</div>

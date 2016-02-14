@@ -28,6 +28,9 @@ body{
   float: left;
   background-color: white;
 }
+.inner-content {
+	margin: 5em;
+}
 
 .sidebar{
   width: 20%;
@@ -48,7 +51,7 @@ body{
 
 .sidebar li{
     width: 100%;
-    padding-top: 25%;
+    padding-top: 5em;
 }
 
 .sidebar a{
