@@ -1,6 +1,10 @@
 class CreateParticipants < ActiveRecord::Migration
   def change
     create_table :participants do |t|
+    	t.string :name
+    	t.string :gender
+    	t.date :date_of_birth
+    	t.string :address
 
       t.timestamps null: false
     end
