@@ -5,7 +5,8 @@ class StudiesController < ApplicationController
 	end
 
 	def show
-
+		@study = Study.find(params[:id])
+		@locations = @study.study_locations
 	end
 
 	def new

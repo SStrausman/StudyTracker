@@ -1,0 +1,14 @@
+<div class="inner-content">
+	<h1><%= @study.title %></h1>
+	<p><strong>Principal Investigator:</strong></p>
+	<p><%= @study.principal_investigator %></p>
+	<p><strong>Sites</strong></p>
+	<% if @locations.length == 0 %>
+		<p> There are no current sites for this study </p>
+	<% else %>
+		<% @locations.each do |location| %>
+			<p><%= link_to "#{location.name}", study_study_locations_path(location) %></p>
+		<% end %>
+	<% end %>
+	<%= link_to 'Add Site To Study', new_study_study_location_path(@study), :class=> "button"%>
+</div>

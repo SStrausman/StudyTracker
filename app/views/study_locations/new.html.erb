@@ -1,0 +1,16 @@
+<div class="inner-content">
+	<h1>Add Location To This Study</h1>
+	<p>Please note, if you have not already registered your location you will have to do so by clicking the button on the main navigation menu.</p>
+	<%= form_for [@study, @study_location] do |f| %>
+		<p><%= f.label "#{@study.title}" %></p>
+		<p><%= f.hidden_field :study_id, :value => params[:study_id] %></p>
+		<p><%= f.label :site %></p>
+		<p><%= f.select :site_id, options_from_collection_for_select(Site.order(:name).all, "id", "name") %>
+		</p>
+		<p><%= f.submit %></p>
+		<% @study.errors.full_messages.each do |error| %>
+				<p><%= error %></p>
+		<% end %>
+	<% end %>
+</div>
+</div>
