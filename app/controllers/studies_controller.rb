@@ -8,7 +8,7 @@ class StudiesController < ApplicationController
 
 	end
 
-	def create
+	def new
 
 	end
 
