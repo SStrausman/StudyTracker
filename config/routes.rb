@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :study_locations
   end
   resources :sites
+  resources :participants
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

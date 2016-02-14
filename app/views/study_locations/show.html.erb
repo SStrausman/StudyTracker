@@ -1,0 +1,33 @@
+<div class="inner-content">
+	<h1><%= @study_location.site.name %></h1>
+	<p><strong>Study</strong></p>
+	<p><%= @study.title %></p>
+	<p><strong>Participants</strong></p>
+	<% if @participations.length == 0 %>
+		<p>There are no participants currently registered for this study at this location.</p>
+	<% else %>
+		<table>
+			<thead>
+	    <tr>
+	      <th>Name</th>
+	      <th>Date of Birth</th>    
+	      <th>Gender</th>
+	      <th>Address</th>
+	      <th></th>
+	    </tr>
+	    </thead>
+			<% @participants.each do |participant| %>
+				<tr>
+					<td><%= participant.name %> </td>
+					<td><%= participant.date_of_birth %></td>
+					<td><%= participant.gender %></td>
+					<td><%= participant.address %></td>
+					<td><%= link_to "View", participant_path(participant) %></td>
+				</tr>
+			<% end %>
+		</table>	
+	<% end %>
+	<div>
+		<%= link_to "Return To Study", study_path(@study), :class => "button" %>
+	</div>
+</div>
