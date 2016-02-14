@@ -7,6 +7,7 @@ class ParticipantsController < ApplicationController
 	end
 
 	def new
+		@participant = Participant.new
 	end
 
 	def create

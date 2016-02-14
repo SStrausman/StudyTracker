@@ -2,7 +2,8 @@
 	<h1><%= @study_location.site.name %></h1>
 	<p><strong>Study</strong></p>
 	<p><%= @study.title %></p>
-	<p><strong>Participants</strong></p>
+	<strong>Participants</strong>
+	</ul>
 	<% if @participations.length == 0 %>
 		<p>There are no participants currently registered for this study at this location.</p>
 	<% else %>
@@ -27,7 +28,13 @@
 			<% end %>
 		</table>	
 	<% end %>
-	<div>
+	<div class="button-div">
+		<%= link_to "Create a New Participant", new_participant_path(:site_id => @site.id, :study_id => @study.id), :class => 'button' %>
+	</div>
+	<div class="button-div">
+		<%= link_to "Enroll Existing Participant", new_site_participation_path(@study_location.site), :class => 'button' %>
+	</div>
+	<div class="button-div">
 		<%= link_to "Return To Study", study_path(@study), :class => "button" %>
 	</div>
 </div>

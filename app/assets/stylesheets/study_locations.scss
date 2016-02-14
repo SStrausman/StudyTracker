@@ -6,3 +6,25 @@ table, th, td {
 th, td {
     padding: 5px;
 }
+table {
+	margin-top: 2em;
+}
+
+.inner-content .button {
+	float:left;
+	width: 35%;
+	margin-left: 0;
+}
+
+.button-div {
+	width:100%;
+	float:left;
+	display: block;
+	padding:0;
+	margin:0;
+}
+
+.button-div .button {
+	margin-top:.25em;
+	margin-bottom:.25em;
+}

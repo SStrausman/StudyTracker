@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   resources :studies do 
     resources :study_locations
   end
-  resources :sites
+  resources :sites do 
+    resources :participations
+  end
   resources :participants
 
   # Example of regular route:
