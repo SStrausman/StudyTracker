@@ -1,0 +1,13 @@
+<div class="inner-content">
+	<h1>Register A Site</h1>
+	<%= form_for(@site) do |f| %>
+		<p><%= f.label :name %></p>
+		<p><%= f.text_field :name %></p>
+		<p><%= f.label :location %></p>
+		<p><%= f.text_field :location %></p>
+		<p><%= f.submit %></p>
+		<% @site.errors.full_messages.each do |error| %>
+				<p><%= error %></p>
+		<% end %>
+	<% end %>
+</div>
