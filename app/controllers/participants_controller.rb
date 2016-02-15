@@ -25,13 +25,10 @@ class ParticipantsController < ApplicationController
 		end
 	end
 
-	def update
-	end
-
 	private
 
 	def participant_params
-		params.require(:participant).permit(:name, :gender, :date_of_birth, :address)
+		params.require(:participant).permit(:name, :gender, :date_of_birth, :address, :last_four)
 	end
 
 end

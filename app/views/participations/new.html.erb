@@ -1,0 +1,16 @@
+<div class="inner-content">
+	<h1>Enroll An Existing Participant</h1>
+	<%= form_for [@site, @participation] do |f| %>
+		<p><%= f.label "#{@study.title}" %></p>
+		<p><%= f.hidden_field :study_id, :value => params[:study_id] %></p>
+		<p><%= f.label "#{@site.name}" %></p>
+		<p><%= f.hidden_field :site_id, :value => params[:site_id] %></p>
+		<p><%= f.label :participant %></p>
+		<p><%= f.select :participant_id, options_for_select(Participant.all.collect {|e| ["#{e.name} - #{e.last_four}", e.id] }) %>
+		</p>
+		<p><%= f.submit %></p>
+		<% @participation.errors.full_messages.each do |error| %>
+				<p><%= error %></p>
+		<% end %>
+	<% end %>
+</div>

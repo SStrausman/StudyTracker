@@ -32,7 +32,7 @@
 		<%= link_to "Create a New Participant", new_participant_path(:site_id => @site.id, :study_id => @study.id), :class => 'button' %>
 	</div>
 	<div class="button-div">
-		<%= link_to "Enroll Existing Participant", new_site_participation_path(@study_location.site), :class => 'button' %>
+		<%= link_to "Enroll Existing Participant", new_site_participation_path(@study_location.site, :study_id => @study.id), :class => 'button' %>
 	</div>
 	<div class="button-div">
 		<%= link_to "Return To Study", study_path(@study), :class => "button" %>
