@@ -7,6 +7,7 @@ class StudiesController < ApplicationController
 	def show
 		@study = Study.find(params[:id])
 		@locations = @study.study_locations
+		@participations = Participation.where("study_id = ?", @study.id).order("site_id")
 	end
 
 	def new

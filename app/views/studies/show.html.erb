@@ -10,5 +10,30 @@
 			<p><%= link_to "#{location.site.name}", study_study_location_path(@study, location) %></p>
 		<% end %>
 	<% end %>
+	<p><strong>Participants</strong></p>
+	<% if @participations.length == 0 %>
+		<p>There are no current participants in this study.</p>
+	<% else %>
+		<table>
+			<thead>
+				<tr>
+			    <th>Site</th>
+			    <th>Name</th>    
+			    <th>Date of Birth</th>
+			    <th>Address</th>
+			    <th></th>
+			  </tr>
+			</thead>
+			<% @participations.each do |part| %>
+				<tr>
+					<td><%= part.site.name %></td>
+					<td><%= part.participant.name %></td>
+					<td><%= part.participant.date_of_birth %></td>
+					<td><%= part.participant.address %></td>
+					<td><%= link_to "View", participant_path(part.participant) %></td>
+				</tr>
+		<% end %>
+	<% end %>
+	</table>
 	<%= link_to 'Add Site To Study', new_study_study_location_path(@study), :class=> "button"%>
 </div>
