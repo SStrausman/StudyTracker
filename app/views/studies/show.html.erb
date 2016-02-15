@@ -1,5 +1,11 @@
 <div class="inner-content">
 	<h1><%= @study.title %></h1>
+	<p><strong>Status</strong></p>
+	<% if @study.open == true %>
+		<p>Open</p>
+	<% else %>
+		<P>Closed</p>
+	<% end %>
 	<p><strong>Principal Investigator:</strong></p>
 	<p><%= @study.principal_investigator %></p>
 	<p><strong>Sites</strong></p>
