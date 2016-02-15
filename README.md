@@ -8,7 +8,7 @@ StudyTracker is a simple rails application I wrote for a code challenge. It is u
 1. clone the repo
 2. change directory to local repo
 3. bundle install to get all gems
-4. create the database, migrate, seed database.
+4. create the database, migrate, seed database. [rake db:create, rake db:migrate, rake db:seed]
 5. run rails s to start your server.
 6. visit site in browser from your localhost.
 
