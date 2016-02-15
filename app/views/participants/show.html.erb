@@ -2,8 +2,9 @@
 	<h1><%= @participant.name %></h1>
 	<p><strong>Gender</strong></p>
 	<p><%= @participant.gender %></p>
+	<p><strong>Date Of Birth</strong></p>
+	<p><%= @participant.date_of_birth %></p>
 	<p><strong>Address</strong></p>
 	<p><%= @participant.address %></p>
-		<p><strong>Date Of Birth</strong></p>
-	<p><%= @participant.date_of_birth %></p>
+	<%= link_to 'Back to Study', url_for(:back), :class=> "button"%>
 </div>
