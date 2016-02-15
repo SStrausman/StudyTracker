@@ -15,7 +15,9 @@
  */
 html, body {
   width: 100%;
-  height: 100%;
+  overflow-x: hidden;
+  height:100%;
+  min-height:100%;
 }
 
 body{
@@ -25,8 +27,9 @@ body{
 .content {
   width: 80%;
   height: 100%;
-  float: left;
+  float: right;
   background-color: white;
+  overflow:auto;
 }
 .inner-content {
 	margin: 5em;
@@ -37,7 +40,7 @@ body{
   height: 100%;
   float: left;
   background-color: rgb(078, 042, 132);
-  
+  position: fixed;
 }
 
 .sidebar ul{

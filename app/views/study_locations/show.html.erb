@@ -17,13 +17,13 @@
 	      <th></th>
 	    </tr>
 	    </thead>
-			<% @participants.each do |participant| %>
+			<% @participations.each do |participation| %>
 				<tr>
-					<td><%= participant.name %> </td>
-					<td><%= participant.date_of_birth %></td>
-					<td><%= participant.gender %></td>
-					<td><%= participant.address %></td>
-					<td><%= link_to "View", participant_path(participant) %></td>
+					<td><%= participation.participant.name %> </td>
+					<td><%= participation.participant.date_of_birth %></td>
+					<td><%= participation.participant.gender %></td>
+					<td><%= participation.participant.address %></td>
+					<td><%= link_to "View", participant_path(participation.participant) %></td>
 				</tr>
 			<% end %>
 		</table>	

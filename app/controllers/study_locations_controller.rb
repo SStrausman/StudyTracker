@@ -5,10 +5,6 @@ class StudyLocationsController < ApplicationController
 		@study_location = StudyLocation.find(params[:id])
 		@site = @study_location.site
 		@participations = Participation.where("site_id = ? AND study_id = ?", @site.id, @study.id)
-		@participants =[]
-		@participations.each do |part|
-			@participants << Participant.find(part.participant_id)
-		end
 	end
 
 	def new
