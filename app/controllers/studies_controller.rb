@@ -24,6 +24,9 @@ class StudiesController < ApplicationController
 	end
 
 	def update
+		@study = Study.find(params[:id])
+		@study.update_attributes(study_params)
+		redirect_to study_path(@study)
 	end
 
 	private

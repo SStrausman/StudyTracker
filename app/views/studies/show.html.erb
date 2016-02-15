@@ -6,6 +6,9 @@
 	<% else %>
 		<P>Closed</p>
 	<% end %>
+	<%= form_for [@study], html: {method: "put"} do |f| %>
+    <p><strong><%= f.label "Change Status" %> <%= f.select :open, [['Open', true], ['Closed', false]]%> </strong><%= f.submit "Update"%></p>
+  <% end %>
 	<p><strong>Principal Investigator:</strong></p>
 	<p><%= @study.principal_investigator %></p>
 	<p><strong>Sites</strong></p>

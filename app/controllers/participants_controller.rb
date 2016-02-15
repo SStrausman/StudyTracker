@@ -1,7 +1,5 @@
 class ParticipantsController < ApplicationController
 
-	def index
-	end
 
 	def show
 		@participant = Participant.find(params[:id])
