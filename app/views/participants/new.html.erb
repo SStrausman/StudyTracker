@@ -3,11 +3,20 @@
 	<%= form_for(@participant) do |f| %>
 		<p><%= f.label :name %></p>
 		<p><%= f.text_field :name %></p>
-		<p><%= f.label :location %></p>
-		<p><%= f.text_field :location %></p>
+		<p><%= f.label :gender %></p>
+		<p><%= f.text_field :gender %></p>
+		<p><%= f.label :date_of_birth %></p>
+		<p><%= f.date_field :date_of_birth %></p>
+		<p><%= f.label :address %></p>
+		<p><%= f.text_field :address %></p>
+		<%= hidden_field_tag(:study_id, params[:study_id]) %>
+		<%= hidden_field_tag(:site_id, params[:site_id]) %>
 		<p><%= f.submit %></p>
-		<% @site.errors.full_messages.each do |error| %>
-				<p><%= error %></p>
+		<% @participant.errors.full_messages.each do |error| %>
+			<p><%= error %></p>
+		<% end %>
+		<% @participation.errors.full_messages.each do |error| %>
+			<p><%= error %></p>
 		<% end %>
 	<% end %>
 </div>
