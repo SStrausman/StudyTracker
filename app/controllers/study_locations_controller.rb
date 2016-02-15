@@ -1,8 +1,5 @@
 class StudyLocationsController < ApplicationController
 
-	def index
-	end
-
 	def show
 		@study = Study.find(params[:study_id])
 		@study_location = StudyLocation.find(params[:id])
@@ -28,7 +25,6 @@ class StudyLocationsController < ApplicationController
     	render :new
 		end
 	end
-
 
 	private
 	def study_location_params

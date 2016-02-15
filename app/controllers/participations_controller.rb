@@ -17,7 +17,6 @@ class ParticipationsController < ApplicationController
 		end
 	end
 
-
 	private
 
 	def participation_params

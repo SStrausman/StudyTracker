@@ -16,10 +16,7 @@ class SitesController < ApplicationController
     	render :new
 		end
 	end
-
-	def update
-	end
-
+	
 	private
 
 	def site_params
