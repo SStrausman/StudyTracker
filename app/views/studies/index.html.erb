@@ -3,10 +3,10 @@
   <table id="study_table">
     <thead>
     <tr>
-      <th>Study Number</th>
-      <th>Title</th>    
-      <th>Principal Investigator</th>
-      <th>Status</th>
+      <th><%= sort_by_column "id", "Study Number" %></th>
+      <th><%= sort_by_column "title" %></th>    
+      <th><%= sort_by_column "principal_investigator", "Principal Investigator" %></th>
+      <th><%= sort_by_column "open", "Status"%></th>
       <th></th>
     </tr>
     </thead>
