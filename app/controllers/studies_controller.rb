@@ -37,7 +37,7 @@ class StudiesController < ApplicationController
 	end
 
 	def sort_column
-    Study.column_names.include?(params[:sort]) ? params[:sort] : "titlete"
+    Study.column_names.include?(params[:sort]) ? params[:sort] : "title"
   end
   
   def sort_direction
